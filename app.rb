@@ -22,7 +22,9 @@ end
 
 def decode(code_sentence)
   sentence_splited = code_sentence.split('   ')
-  sentence_array = sentence_splited.map { |word| decode_word(word) }
+  sentence_array = sentence_splited.map do |word|
+    decode_word(word)
+  end
   sentence_array.join(' ')
 end
 
